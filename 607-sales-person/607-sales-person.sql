@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+select SalesPerson.name from SalesPerson left join (select Company.com_id, Company.name, sales_id from Company join Orders on Company.com_id = Orders.com_id where Company.name="RED") temp on SalesPerson.sales_id=temp.sales_id where temp.sales_id is Null
